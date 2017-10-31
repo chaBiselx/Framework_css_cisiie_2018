@@ -1,0 +1,7 @@
+Projet de framework css réaliseé par Charles BISELX pour un projet étudiant.
+
+1) Insérer le dossier css dans le dossier publique de votre projet
+
+2) Insérer la balise '<link rel="stylesheet" href="css/main.css">' dans la balise head dans le fichier html de votre application
+
+3) modifier le fichier main.css pour correspondre à vos besoin
