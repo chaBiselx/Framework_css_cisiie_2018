@@ -1,0 +1,381 @@
+
+
+@charset "UTF-8";
+
+@font-face {
+  font-family: "Old western" ;
+  src: url("go-2-old-western/Go 2 Old Western.otf");
+}
+
+@font-face {
+  font-family: "Durango" ;
+  src: url("durango-western-eroded/Durango Western Eroded Demo.otf");
+}
+
+$main_font: "Old western" ;
+$second_font: "Durango" ;
+$text_color: black;
+$main_color: moccasin;
+$main_background:  url("img/background.jpg");
+$number_column: 12;
+$intercolumn: 1%;
+$margin_button: 0 0 0.5em 0;
+
+
+$small: 80%;
+$big: 120%;
+
+/* grid
+=======================================================*/
+.cell {
+  margin-left: $intercolumn;
+  margin-right: $intercolumn;
+  min-height: 0px ;
+  min-width:  0px ;
+}
+
+.large-1{
+  display: inline-block;
+  width: calc( 7.3% - 6% )  ;
+}
+
+.large-2{
+  display: inline-block;
+  width:  calc( 19.7% - 6% ) ;
+}
+
+.large-3{
+  display: inline-block;
+  width:  calc( 24% - 6% ) ;
+}
+
+.large-4{
+  display: inline-block;
+  width:  calc( 32.3% - 6% ) ;
+}
+
+.large-5{
+  display: inline-block;
+  width:  calc( 40.6% - 6% ) ;
+}
+
+.large-6{
+  display: inline-block;
+  width: calc( 49% - 6% ) ;
+}
+
+.large-7{
+  display: inline-block;
+  width:  calc( 57.3% - 6% ) ;
+}
+
+.large-8{
+  display: inline-block;
+  width:  calc( 65.7% - 6% ) ;
+}
+
+.large-9{
+  display: inline-block;
+  width:  calc( 74% - 6% ) ;
+}
+
+.large-10{
+  display: inline-block;
+  width:   calc( 82.3%- 6% ) ;
+}
+
+.large-11{
+  display: inline-block;
+  width:  calc( 90.6% - 6% )  ;
+}
+
+.large-12{
+  display: inline-block;
+  width:  calc( 99% - 6% )  ;
+}
+
+
+/* scrollbar
+=======================================================*/
+::-webkit-scrollbar {
+	width : 6px;
+	height : 3px;
+}
+
+::-webkit-scrollbar-track {
+	background-color : white;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color : grey;
+	border-radius: 10px;
+}
+
+/* Main menu
+=======================================================*/
+
+.main_list {
+    color: $text_color;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: $main_color;
+}
+
+@media screen and (  min-width:1400px  ){
+  .main_list{
+    flex-flow: row;
+  }
+}
+
+@media screen and ( min-width: 600px )
+              and ( max-width: 1400px){
+  .main_list{
+    flex-flow: row;
+    justify-content: center;
+  }
+
+}
+.main_link {
+    display: inline;
+    text-align: center
+}
+
+.main_link a {
+    color: $text_color;
+    text-align: center;
+    display: inline-block;
+    padding: 16px;
+    text-decoration: none;
+}
+
+/* Block
+=======================================================*/
+
+body{
+  color: $text_color;
+  background-image: $main_background;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color: $main_color;
+  margin: 0;
+  line-height: 1.25;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+div{
+  margin-top:  0.1em;
+}
+/* Text
+=======================================================*/
+
+body{
+  font-family: $main_font ;
+  font-size: 18pt;
+  margin : 5%;
+}
+
+h1, h2 ,h3{
+  font-family: $second_font;
+  margin: 0.2;
+}
+
+h1{
+  margin: 0.5em;
+}
+
+a{
+  text-decoration: underline;
+  color:  #66666f;
+}
+
+a:hover{
+  background-color: lightgrey;
+  font-style: italic;
+}
+
+p{
+  text-align: left;
+}
+
+ol, ul{
+  margin: 0.3em;
+}
+
+ol li ,ul li{
+  list-style-image: url("img/barillet.png");
+  list-style-position: outside;
+  padding-bottom: 0.5em;
+}
+
+b,strong {
+  font-weight: bolder;
+}
+
+em,i {
+  font-style: italic;
+}
+
+small {
+  font-size: $small;
+}
+big{
+  font-size: $big;
+}
+
+@media screen and (max-width : 600px ) {
+  body{
+    font-size: 16pt;
+  }
+
+  h1, h2 ,h3{
+    line-height: 2;
+  }
+
+  h1{
+    text-align: center;
+  }
+
+
+}
+/* Form
+=======================================================*/
+.oneline{
+  display: inline-block;
+  white-space: nowrap;
+}
+
+label{
+  display: block;
+}
+
+input{
+  display: inline-block;
+}
+
+
+input+label{
+  display: inline-block;
+  white-space: nowrap;
+}
+
+@media screen and (  min-width:600px  ){
+  input{
+    display: inline-block;
+  }
+
+  input+label{
+    display: inline-block;
+  }
+}
+
+
+textarea {
+  max-width: 100%; }
+  textarea[rows] {
+    height: auto; }
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: $text_color; }
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: $text_color; }
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: $text_color;  }
+
+input::placeholder,
+textarea::placeholder {
+  color: $text_color;  }
+
+/* Button link
+=======================================================*/
+/* simple button*/
+.button{
+  display: inline-block;
+  vertical-align: middle;
+  margin: $margin_button;
+  text-decoration: inherit;
+  padding: 0.5em 0.8em 0.5em 0.8em;
+  -webkit-appearance: none;
+  border: 2px solid;
+  border-color: black;
+  border-radius: 6px;
+  transition: background-color 0.25s ease-out, color 0.25s ease-out;
+  font-size: 0.9em;
+  line-height: 1;
+  text-align: center;
+  cursor: pointer;
+  background-color: $main_color;
+  color: black;
+}
+.button:hover, .button:focus {
+  background-color: black;
+  color: #fefefe;
+}
+
+.button.secondary {
+  background-color: #767676;
+  color: black;
+}
+.button.secondary:hover, .button.secondary:focus {
+  background-color: #333333;
+  color: #fefefe;
+}
+
+.button.success {
+  background-color:  #99ff66;
+  color: #0a0a0a;
+}
+.button.success:hover, .button.success:focus {
+  background-color: #2a8000;
+  color: #0a0a0a;
+}
+
+@keyframes alert_annimation {
+  0%   {background-color:#ff0000; left:0px; top:0px;}
+  25%  {background-color:#ff8000; left:200px; top:0px;}
+  50%  {background-color:#ffd11a; left:200px; top:200px;}
+  75%  {background-color:#e65c00; left:0px; top:200px;}
+  100% {background-color:#ff0000; left:0px; top:0px;}
+}
+
+.button.alert {
+  background-color: #cc4b37;
+  color: #fefefe;
+}
+.button.alert:hover, .button.alert:focus {
+  background-color: #a53b2a;
+  color: #fefefe;
+  animation-name: alert_annimation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+/* Code
+=======================================================*/
+code, kbd, samp {
+  border: solid 2px white;
+  border-radius: 6px;
+  font-family: monospace, monospace;
+  font-size: 12pt;
+  color: white;
+  margin-top: 4%;
+  padding: 0.8%;
+
+  background-color: black;
+}
